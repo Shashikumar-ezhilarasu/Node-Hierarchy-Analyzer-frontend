@@ -20,6 +20,7 @@ interface ApiResponse {
   user_id: string;
   email_id: string;
   college_roll_number: string;
+  name: string;
   hierarchies: Hierarchy[];
   invalid_entries: string[];
   duplicate_edges: string[];
@@ -122,6 +123,25 @@ export default function GraphAnalyzer() {
       {result && (
         <div style={{ borderTop: '2px solid black', paddingTop: '20px' }}>
           <h2>Analysis Result</h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px', marginBottom: '20px' }}>
+            <div style={{ border: '1px solid black', padding: '10px' }}>
+              <span style={{ fontWeight: 'bold', display: 'block', fontSize: '12px' }}>NAME</span>
+              {result.name}
+            </div>
+            <div style={{ border: '1px solid black', padding: '10px' }}>
+              <span style={{ fontWeight: 'bold', display: 'block', fontSize: '12px' }}>ROLL NUMBER</span>
+              {result.college_roll_number}
+            </div>
+            <div style={{ border: '1px solid black', padding: '10px' }}>
+              <span style={{ fontWeight: 'bold', display: 'block', fontSize: '12px' }}>USER ID</span>
+              {result.user_id}
+            </div>
+            <div style={{ border: '1px solid black', padding: '10px' }}>
+              <span style={{ fontWeight: 'bold', display: 'block', fontSize: '12px' }}>EMAIL</span>
+              {result.email_id}
+            </div>
+          </div>
           
           <div style={{ border: '1px solid black', padding: '15px', marginBottom: '20px' }}>
             <h3>Summary</h3>
@@ -175,6 +195,13 @@ export default function GraphAnalyzer() {
               </div>
             ))
           )}
+
+          <div style={{ marginTop: '40px' }}>
+            <h3 style={{ borderBottom: '1px solid black', paddingBottom: '5px' }}>Full API Response (JSON)</h3>
+            <pre style={{ background: '#eee', padding: '15px', border: '1px solid black', overflowX: 'auto', fontSize: '12px' }}>
+              {JSON.stringify(result, null, 2)}
+            </pre>
+          </div>
 
         </div>
       )}
