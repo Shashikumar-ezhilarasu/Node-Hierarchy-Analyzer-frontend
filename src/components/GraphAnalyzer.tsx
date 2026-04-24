@@ -20,7 +20,6 @@ interface ApiResponse {
   user_id: string;
   email_id: string;
   college_roll_number: string;
-  name: string;
   hierarchies: Hierarchy[];
   invalid_entries: string[];
   duplicate_edges: string[];
@@ -125,10 +124,6 @@ export default function GraphAnalyzer() {
           <h2>Analysis Result</h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px', marginBottom: '20px' }}>
-            <div style={{ border: '1px solid black', padding: '10px' }}>
-              <span style={{ fontWeight: 'bold', display: 'block', fontSize: '12px' }}>NAME</span>
-              {result.name}
-            </div>
             <div style={{ border: '1px solid black', padding: '10px' }}>
               <span style={{ fontWeight: 'bold', display: 'block', fontSize: '12px' }}>ROLL NUMBER</span>
               {result.college_roll_number}
