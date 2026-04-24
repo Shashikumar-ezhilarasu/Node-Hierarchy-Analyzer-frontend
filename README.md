@@ -2,7 +2,7 @@
 
 This is the frontend application for the Node Hierarchy Analyzer, built with Next.js. It provides a clean, responsive interface to submit graph edge data, visualize hierarchical trees, and analyze graph properties such as cycles and connectivity.
 
-## 🚀 Features
+## Features
 
 - **Interactive Edge Input**: Submit parent-child relationships (e.g., `A->B`) via an intuitive text interface.
 - **Hierarchical Visualization**: Displays processed trees with depth information and root identification.
@@ -11,14 +11,14 @@ This is the frontend application for the Node Hierarchy Analyzer, built with Nex
 - **Live Summary**: Shows total trees found, total cycles detected, and identifies the largest tree root.
 - **Raw JSON Viewer**: Includes a built-in JSON inspector to view the complete API response for verification.
 
-## 🛠 Technology Stack
+## Technology Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
 - **Language**: TypeScript
 - **Styling**: Modern CSS with a clean, terminal-inspired monospace aesthetic.
 - **API Communication**: Fetch API with asynchronous state management.
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -52,7 +52,7 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 src/
@@ -64,7 +64,7 @@ src/
     └── GraphAnalyzer.tsx # Core logic: UI state, API calls, and result rendering
 ```
 
-## 🔗 API Integration
+## API Integration
 
 The frontend integrates with the [Node Hierarchy Analyzer Backend](https://github.com/Shashikumar-ezhilarasu/Node-Hierarchy-Analyzer--backend) hosted on Render. It sends a list of edges and receives a structured breakdown of the resulting forest, including trees, cycles, and metadata.
 
