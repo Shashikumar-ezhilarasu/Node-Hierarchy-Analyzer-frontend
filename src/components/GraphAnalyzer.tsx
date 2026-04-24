@@ -33,7 +33,7 @@ export default function GraphAnalyzer() {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<ApiResponse | null>(null);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/bfhl';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://shashikumar-ezhilarasu-bfhl.onrender.com/bfhl';
 
   const loadExample = () => {
     const example = `A->B, A->C, B->D, C->E, E->F\nX->Y, Y->Z, Z->X\nP->Q, Q->R, P->Q\nG->H, G->I, H->J\nhello, 1->2, A->\na->b`;
